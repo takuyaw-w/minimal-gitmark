@@ -1,0 +1,16 @@
+{
+  "version": "4",
+  "specifiers": {
+    "npm:@qnighy/dedent@~0.1.1": "0.1.1"
+  },
+  "npm": {
+    "@qnighy/dedent@0.1.1": {
+      "integrity": "sha512-1TogcOCQlxSL4fS2n3jUtwoTHIlXJN3cw3FmQKSdmVpbVr03gKeXTEskPxqqMT24xkid59bEGv4ZB6oUQqq2fw=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "npm:@qnighy/dedent@~0.1.1"
+    ]
+  }
+}

@@ -1,4 +1,11 @@
 {
-  "tasks": {},
-  "imports": {}
+  "tasks": {
+    "generate-article": {
+      "command": "deno -W ./scripts/generate-article-template.ts",
+      "description": "記事のテンプレート生成"
+    }
+  },
+  "imports": {
+    "@qnighy/dedent": "npm:@qnighy/dedent@^0.1.1"
+  }
 }
