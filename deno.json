@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "generate-article": {
-      "command": "deno -W ./scripts/generate-article-template.ts",
+    "new-article": {
+      "command": "deno -W --unstable-temporal ./scripts/generate-article-template.ts",
       "description": "記事のテンプレート生成"
     }
   },
