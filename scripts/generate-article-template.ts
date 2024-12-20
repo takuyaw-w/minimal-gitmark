@@ -1,6 +1,5 @@
 import { dedent } from "@qnighy/dedent";
 
-// ファイル名: generate-article-template.ts
 function generateArticleTemplate() {
   const jst = Temporal.Now.instant().toString({ timeZone: "Asia/Tokyo" });
 
@@ -21,13 +20,10 @@ function generateArticleTemplate() {
     `;
 }
 
-// 記事テンプレート生成
 const articleTemplate = generateArticleTemplate();
+const fileName = `contents/new-article/index.md`;
 
-// ファイルに保存
-const fileName = `posts/new-article/index.md`;
-
-await Deno.mkdir('posts/new-article')
+await Deno.mkdir("contents/new-article");
 await Deno.writeTextFile(fileName, articleTemplate);
 
 console.log(`created successfully: ${fileName}`);
