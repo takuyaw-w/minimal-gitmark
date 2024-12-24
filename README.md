@@ -1,6 +1,6 @@
 # minimal-gitmark
 
-GitHub と Markdown を活用した個人的なブログ。
+ミニマムなブログ。
 
 ## ライセンスに関する注意事項
 
