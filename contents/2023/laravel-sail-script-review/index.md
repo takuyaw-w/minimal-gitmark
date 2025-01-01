@@ -16,7 +16,7 @@ image: ""
 published: false
 ---
 
-Laravel の環境構築に便利な sail。`curl`コマンド一発で呼び出せて、with である程度好きな構成で立ち上げられる。  
+Laravelの環境構築に便利なsail。`curl`コマンド一発で呼び出せて、withである程度好きな構成で立ち上げられる。  
 しかし、バージョンを指定して構築できない。
 
 適当に素振りする程度だとあまり困らないが、ハンズオン的な資料を見つつやるとディレクトリ構成などがバージョン毎に異なっていて戸惑うことがある。  
@@ -24,7 +24,7 @@ Laravel の環境構築に便利な sail。`curl`コマンド一発で呼び出�
 
 ## シェルスクリプトを覗いてみる
 
-以下の URL をクリックすることで、ブラウザ上でシェルスクリプトの中身が見れる。  
+以下のURLをクリックすることで、ブラウザ上でシェルスクリプトの中身が見れる。  
 [https://laravel.build/project_name]
 
 または、`curl`コマンドを利用してローカル上にファイルを作成する  
@@ -83,16 +83,16 @@ else
 fi
 ```
 
-Laravel のインストールには[laravel/installer](https://github.com/laravel/installer)を利用している。  
-この laravel/installer がバージョン指定できず、必ず最新の Laravel のバージョンを取得しているよう。なんでだろう。
+Laravelのインストールには[laravel/installer](https://github.com/laravel/installer)を利用している。  
+このlaravel/installerがバージョン指定できず、必ず最新のLaravelのバージョンを取得しているよう。なんでだろう。
 
-Laravel の特定のバージョンを指定してインストールしたい場合には、laravel/installer を利用せず、composer 経由でインストールを行えば良い。  
+Laravelの特定のバージョンを指定してインストールしたい場合には、laravel/installerを利用せず、composer経由でインストールを行えば良い。  
 コマンドとしては以下のようになる。  
 `composer create-project "laravel/laravel={{ version_number }}" dirname`
 
-## シェルスクリプトをバージョン指定できるように変更してみる。
+## シェルスクリプトをバージョン指定できるように変更してみる
 
-先程の項で、シェルスクリプトを覗いた結果、どこの部分を変更すれば Laravel の特定のバージョンを指定できるかがわかったので、それを反映してみる。
+先程の項で、シェルスクリプトを覗いた結果、どこの部分を変更すればLaravelの特定のバージョンを指定できるかがわかったので、それを反映してみる。
 
 ```sh
 docker info >/dev/null 2>&1
@@ -142,4 +142,4 @@ fi
 
 大した変更はしてなくて、`laravel new`しているところを`composer create-project`としただけ。
 使う機会あるかわからないけど、自分向けに。  
-with の部分や devcontainer はお好きなように。
+withの部分やdevcontainerはお好きなように。

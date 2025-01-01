@@ -45,7 +45,7 @@ sudo pacman-mirrors --fasttrack && sudo pacman -Syy
 sudo nano /etc/pacman.conf
 ```
 
-#Color とコメントアウトされている箇所があるので、そこを修正。
+#Colorとコメントアウトされている箇所があるので、そこを修正。
 
 ```diff
 - #Color

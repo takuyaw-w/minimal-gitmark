@@ -3,16 +3,23 @@
     "new-article": {
       "command": "deno -W --unstable-temporal ./scripts/generate-article-template.ts",
       "description": "記事のテンプレート生成"
+    },
+    "lint": {
+      "command": "deno -A npm:textlint"
+    },
+    "lint:fix": {
+      "command": "deno task lint --fix"
     }
   },
   "imports": {
     "@qnighy/dedent": "npm:@qnighy/dedent@^0.1.1",
     "@std/front-matter": "jsr:@std/front-matter@^1.0.5",
     "@std/fs": "jsr:@std/fs@^1.0.7",
-    "@std/path": "jsr:@std/path@^1.0.8"
+    "@std/path": "jsr:@std/path@^1.0.8",
+    "textlint": "npm:textlint@^14.4.2",
+    "textlint-rule-preset-ja-spacing": "npm:textlint-rule-preset-ja-spacing@^2.4.3",
+    "textlint-rule-preset-ja-technical-writing": "npm:textlint-rule-preset-ja-technical-writing@^10.0.1",
+    "textlint-rule-preset-jtf-style": "npm:textlint-rule-preset-jtf-style@^3.0.1"
   },
-  "unstable": ["temporal"],
-  "fmt": {
-    "exclude": ["./**/*.md"]
-  }
+  "unstable": ["temporal"]
 }

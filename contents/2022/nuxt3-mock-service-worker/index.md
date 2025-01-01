@@ -15,9 +15,9 @@ image: ""
 published: true
 ---
 
-nuxt3 の素振りついでに、最近よく zenn などで見る mock service worker を導入してみた。
+nuxt3の素振りついでに、最近よくzennなどで見るmock service workerを導入してみた。
 
-mock service worker については以下参照。
+mock service workerについては以下参照。
 [Mock Service Worker - API mocking library for browser and Node.js](https://mswjs.io/)
 
 ## nuxt3 環境構築
@@ -75,7 +75,7 @@ export const worker = setupWorker(...handlers);
 npx msw init public/ --save
 ```
 
-多分、save オプションはつけなくても問題ない。
+多分、saveオプションはつけなくても問題ない。
 
 ### ./plugins/mock.client.ts
 
@@ -121,4 +121,4 @@ export default defineNuxtPlugin(async () => {
 <https://github.com/takuyaw-w/nuxt3-with-msw>
 
 設定数少なく利用できて最高です。
-nuxt2 もほぼ変わらずこれで設定可能なはず。
+nuxt2もほぼ変わらずこれで設定可能なはず。

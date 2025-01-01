@@ -15,11 +15,11 @@ image: ""
 published: true
 ---
 
-Vuetify3 系のアップデートとかを追ってて、2023 年 06 月 23 日現在、Labs に含まれている[useDate](https://vuetifyjs.com/en/features/dates/)っていう API を見ていて、[date-io](https://github.com/dmtrKovalenko/date-io)という見慣れないライブラリがあった。少し調べたら、Material-UI のデートピッカーとかにも使われていた。
+Vuetify3系のアップデートとかを追ってて、2023年06月23日現在、Labsに含まれている[useDate](https://vuetifyjs.com/en/features/dates/)っていうAPIを見ていて、[date-io](https://github.com/dmtrKovalenko/date-io)という見慣れないライブラリがあった。少し調べたら、Material-UIのデートピッカーとかにも使われていた。
 
-要は、Moment.js とか、date-fns とか、luxon とかの日付操作ライブラリの抽象化を行ってくれるライブラリで、date-io を通すことで各ライブラリで異なる API を吸収してくれるもの。  
-手動でインターフェースの拡張可能なので API が案件にフィットしなくても自分で解消できそう
+要は、Moment.jsとか、date-fnsとか、luxonとかの日付操作ライブラリの抽象化を行ってくれるライブラリで、date-ioを通すことで各ライブラリで異なるAPIを吸収してくれるもの。  
+手動でインターフェースの拡張可能なのでAPIが案件にフィットしなくても自分で解消できそう
 
-とりあえず date-io と Moment.js 組み合わせてサクッと作って後々いい感じのライブラリに切り替えるっていうのもそんなに負荷かからずにできそうなのかな。
+とりあえずdate-ioとMoment.js組み合わせてサクッと作って後々いい感じのライブラリに切り替えるっていうのもそんなに負荷かからずにできそうなのかな。
 
-試したリポジトリ: <https://github.com/takuyaw-w/try-date-io>
+試したリポジトリ： <https://github.com/takuyaw-w/try-date-io>

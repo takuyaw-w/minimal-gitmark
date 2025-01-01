@@ -15,17 +15,17 @@ image: ""
 published: true
 ---
 
-React 向けのカスタムフックライブラリを見てみると、[useList](https://usehooks.com/uselist)というカスタムフックがあった。  
-Vue3 向けにこういうライブラリ作れそうだなーと思ったので、ライブラリの作成の練習としてやってみた。
+React向けのカスタムフックライブラリを見てみると、[useList](https://usehooks.com/uselist)というカスタムフックがあった。  
+Vue3向けにこういうライブラリ作れそうだなーと思ったので、ライブラリの作成の練習としてやってみた。
 
-とりあえず、結果としてできたのが以下です。npm へのリンクと GitHub へのリンクを貼ります。
+とりあえず、結果としてできたのが以下です。npmへのリンクとGitHubへのリンクを貼ります。
 
 <https://www.npmjs.com/package/@takuyaw-w/uselist>
 
 <https://github.com/takuyaw-w/useList>
 
-とりあえず、ライブラリ作成に関しての知見がゼロなので、Vue のコミュニティで「参考記事ないですかー」と問うたら、[@kazupon](https://twitter.com/kazu_pon)さん（[Vue-I18n](https://vue-i18n.intlify.dev/)というライブラリを作られている方）から、[参考となる記事](https://dev.to/nickap/exit-intent-pop-up-how-to-publish-on-npm-vue-3-3bhm)をいただいた。  
-Vue のコミュニティの暖かさに感謝。
+とりあえず、ライブラリ作成に関しての知見がゼロなので、Vueのコミュニティで「参考記事ないですかー」と問うたら、[@kazupon](https://twitter.com/kazu_pon)さん（[Vue-I18n](https://vue-i18n.intlify.dev/)というライブラリを作られている方）から、[参考となる記事](https://dev.to/nickap/exit-intent-pop-up-how-to-publish-on-npm-vue-3-3bhm)をいただいた。  
+Vueのコミュニティの暖かさに感謝。
 
 参考となる記事をベースに、自分でライブラリを作ってみたら、かなり簡単にできた。  
 また作ろ

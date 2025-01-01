@@ -15,12 +15,12 @@ image: ""
 published: true
 ---
 
-最近、Laravel と Vue の組み合わせで苦しいという話があって、Inertia.js がそれを救ってくれるかもしれないという話から Inertia.js を素振りし始めた。  
-ただ、[Inertia.js](https://inertiajs.com/)の Installation でつまづいたので、備忘録として、ブログに残しておく
+最近、LaravelとVueの組み合わせで苦しいという話があって、Inertia.jsがそれを救ってくれるかもしれないという話からInertia.jsを素振りし始めた。  
+ただ、[Inertia.js](https://inertiajs.com/)のInstallationでつまづいたので、備忘録として、ブログに残しておく
 
 ## Laravel の環境構築
 
-sail を使って、Laravel の環境構築を行う。DB は mysql より postgres を利用したいため、with クエリで pgsql を指定する。
+sailを使って、Laravelの環境構築を行う。DBはmysqlよりpostgresを利用したいため、withクエリでpgsqlを指定する。
 
 ```bash
 # Laravelの環境構築
@@ -31,8 +31,8 @@ cd {{ project_name }}
 
 ## サーバーサイド側の設定
 
-Laravel の環境構築が終わったらサーバーサイド側の設定を行っていく。  
-sail コマンドは、.bashrc または.zshrc に alias を設定しているものとして、進めていく。
+Laravelの環境構築が終わったらサーバーサイド側の設定を行っていく。  
+sailコマンドは、.bashrcまたは。zshrcにaliasを設定しているものとして、進めていく。
 
 ### inertiajs/inertia-laravel のインストール
 
@@ -74,8 +74,8 @@ protected $middlewareGroups = [
 
 ### optional1: tightenco/ziggy をインストールする
 
-この手順は公式にもないため、オプションとなるが、設定をすると Vue ファイルから Laravel のルーティングを`route('routing.name')`このように指定可能となるため、便利。  
-以下コマンドで、tightenco/ziggy をインストールを行う。
+この手順は公式にもないため、オプションとなるが、設定をするとVueファイルからLaravelのルーティングを`route('routing.name')`このように指定可能となるため、便利。  
+以下コマンドで、tightenco/ziggyをインストールを行う。
 
 ```bash
 # インストール
@@ -84,8 +84,8 @@ sail composer require tightenco/ziggy
 
 ### テンプレート追加
 
-エントリポイントとなる、blade ファイルを追加する。  
-または既存の welcome.blade.php ファイルをリネームする
+エントリポイントとなる、bladeファイルを追加する。  
+または既存のwelcome.blade.phpファイルをリネームする
 
 ```bash
 touch resources/views/app.blade.php
@@ -95,7 +95,7 @@ mv resources/views/welcome.blade.php resources/views/app.blade.php
 
 ### テンプレート修正
 
-先手順で追加した app.blade.php ファイルの内容を以下の内容に変更する
+先手順で追加したapp.blade.phpファイルの内容を以下の内容に変更する
 
 ```html
 <!DOCTYPE html>
@@ -114,7 +114,7 @@ mv resources/views/welcome.blade.php resources/views/app.blade.php
 </html>
 ```
 
-@routes については、[optional: tightenco/ziggy をインストールする](#optional-tightencoziggy-をインストールする)の項をスキップした場合は不要となる。
+@routesについては、[optional: tightenco/ziggy をインストールする](#optional-tightencoziggy-をインストールする)の項をスキップした場合は不要となる。
 
 ## クライアントサイド側の設定
 
@@ -129,7 +129,7 @@ sail npm install @inertiajs/vue3 vue @vitejs/plugin-vue
 
 ### vite.config.js の設定
 
-vite.config.js の設定を行う
+vite.config.jsの設定を行う
 
 ```javascript
 import { defineConfig } from "vite";
@@ -158,7 +158,7 @@ export default defineConfig({
 
 [optional: tightenco/ziggy をインストールする](#optional-tightencoziggy-をインストールする)の項をスキップした場合は不要な手順。
 
-tightenco/ziggy をインストールしただけでは、Vue の template から`route` にはアクセスできないので、プラグインを作成し、Vue の template からアクセスできるようにする。
+tightenco/ziggyをインストールしただけでは、Vueのtemplateから`route` にはアクセスできないので、プラグインを作成し、Vueのtemplateからアクセスできるようにする。
 
 以下コマンドでディレクトリとファイルを作る
 
@@ -179,7 +179,7 @@ export default {
 
 ### app.js を編集
 
-app.js の編集を行う
+app.jsの編集を行う
 
 ```javascript
 import "./bootstrap";
@@ -204,12 +204,12 @@ createInertiaApp({
 ## まとめ
 
 こんな感じで環境構築完了できた。  
-あとは、Laravel で普通に開発進めていけば SPA の開発が進んでいくので、体感はよいけど MPA の利点を捨てるのがどうなんだろうか…  
-SSR できるけど、本番環境に Node.js 必要となるしね
+あとは、Laravelで普通に開発進めていけばSPAの開発が進んでいくので、体感はよいけどMPAの利点を捨てるのがどうなんだろうか…  
+SSRできるけど、本番環境にNode.js必要となるしね
 
 ~~ちなみに tightenco/ziggy を利用した際に気づいたんだけど、Laravel のルーティング設定毎に`sail artisan ziggy:generate`を実行しないといけないのがめんどくさい。自動化できないものかな~~
 
-2023/07/19 追記: ziggy が自動的に生成されなくてだるいっていう話は、構築ミスによるものだった。  
+2023/07/19追記： ziggyが自動的に生成されなくてだるいっていう話は、構築ミスによるものだった。  
 [tightenco/ziggy#advanced-setup](https://github.com/tighten/ziggy#advanced-setup)に記載されてる。  
-ただ、若干嫌な点として routing の情報が head に全て載る。  
-@route 使わないほうがいいかもなぁ。
+ただ、若干嫌な点としてroutingの情報がheadに全て載る。  
+@route使わないほうがいいかもなぁ。

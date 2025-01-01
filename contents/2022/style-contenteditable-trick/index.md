@@ -16,21 +16,21 @@ image: ""
 published: true
 ---
 
-これ元ネタは Twitter で見たんだけど、いいねもブックマークもしていなかったのでどこかに流れてしまった。
+これ元ネタはTwitterで見たんだけど、いいねもブックマークもしていなかったのでどこかに流れてしまった。
 備忘録含めてこちらにメモ。
 
-body 要素内に style 要素を配置して、contenteditable 属性を付与。style 要素に `display: block; white-space: pre;`のスタイルをあててあげると不思議とブラウザ上でリアルタイムにスタイリング可能な領域ができあがります。
+body要素内にstyle要素を配置して、contenteditable属性を付与。style要素に `display: block; white-space: pre;`のスタイルをあててあげると不思議とブラウザ上でリアルタイムにスタイリング可能な領域ができあがります。
 
 <https://github.com/takuyaw-w/style-contenteditable>
 
-上記 clone 後、index.html をブラウザで開くとなんとなく言ってること分かると思う。
+上記clone後、index.htmlをブラウザで開くとなんとなく言ってること分かると思う。
 
-## 仕様的な部分ってどうなの。
+## 仕様的な部分ってどうなの
 
-body 内に style 要素を含めるのは適切じゃないので、飽くまでお遊びです。  
+body内にstyle要素を含めるのは適切じゃないので、飽くまでお遊びです。  
 参考：[HTML Standard 日本語訳](https://momdo.github.io/html/semantics.html#the-style-element)
 
-でも contenteditable 含むグローバル属性は指定可みたい。draggable とか autofucus とか要らなくね？なんとなく雑感。
+でもcontenteditable含むグローバル属性は指定可みたい。draggableとかautofucusとか要らなくね？なんとなく雑感。
 
 実務では恐らく役に立たないけど、覚えとくと少しドヤれる…かも
 
