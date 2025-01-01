@@ -15,8 +15,7 @@
     },
     "preset-ja-technical-writing": {
       "sentence-length": false,
-      "no-exclamation-question-mark": false,
-      "no-hankaku-kana": true
+      "no-exclamation-question-mark": false
     }
   }
 }
