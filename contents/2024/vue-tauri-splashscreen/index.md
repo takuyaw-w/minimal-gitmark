@@ -207,8 +207,11 @@ createApp(Splashscreen).mount("#app");
 }
 ```
 
-### まとめ
+## まとめ
 
 Vueを使ったスプラッシュスクリーンの実装方法について記載した。
 特に難しいことはなく、スプラッシュスクリーン用にエンドポイントを追加することで、Vueを利用したスプラッシュスクリーンを実装できた。
 いつかTauriを使ったアプリを作る際に、スプラッシュスクリーンを実装する際に振り返りたい。
+
+また、今回の実装サンプルとして、リポジトリを作成した。以下のリンクから参照できる。
+[splashscreen-tauri-vue](https://github.com/takuyaw-w/splashscreen-tauri-vue)
